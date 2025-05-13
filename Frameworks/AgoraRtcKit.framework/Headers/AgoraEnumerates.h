@@ -2712,7 +2712,12 @@ typedef NS_OPTIONS(NSInteger, AgoraEarMonitoringFilterType) {
   /**
    * 4: Enable noise suppression to the in-ear monitor.
    */
-  AgoraEarMonitoringFilterNoiseSuppression = (1<<2)
+  AgoraEarMonitoringFilterNoiseSuppression = (1<<2),
+  /**
+   * 32768: Enable audio filters by reuse post-processing filter to the in-ear monitor.
+   * This bit is intended to be used in exclusive mode, which means, if this bit is set, all other bits will be disregarded.
+   */
+  AgoraEarMonitoringFilterReusePostProcessingFilter = (1<<15),
 };
 
 /** The bit mask that controls the audio observation positions.

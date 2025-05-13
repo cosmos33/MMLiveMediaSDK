@@ -5188,7 +5188,12 @@ enum EAR_MONITORING_FILTER_TYPE {
   /**
    * 4: Enable noise suppression to the in-ear monitor.
    */
-  EAR_MONITORING_FILTER_NOISE_SUPPRESSION = (1<<2)
+  EAR_MONITORING_FILTER_NOISE_SUPPRESSION = (1<<2),
+  /**
+   * 32768: Enable audio filters by reuse post-processing filter to the in-ear monitor.
+   * This bit is intended to be used in exclusive mode, which means, if this bit is set, all other bits will be disregarded.
+   */
+  EAR_MONITORING_FILTER_REUSE_POST_PROCESSING_FILTER = (1<<15),
 };
 
 /**
